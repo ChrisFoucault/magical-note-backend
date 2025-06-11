@@ -10,7 +10,8 @@ public class UserController {
 
     @PostMapping("/login")
     public String login(User user) {
-        return "success";
+        String a = "123";
+        return a;
     }
 
 }
