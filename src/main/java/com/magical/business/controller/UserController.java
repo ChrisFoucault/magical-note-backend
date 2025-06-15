@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
-@Tag(name = "用户管理", description = "提供用户的增删改查 API")
+@Tag(name = "用户", description = "提供用户的增删改查 API")
 public class UserController {
 
     @PostMapping("/login")

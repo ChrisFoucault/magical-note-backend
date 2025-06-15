@@ -5,5 +5,14 @@ import lombok.Data;
 @Data
 public class Note {
     // id
-    String id;
+    private Integer id;
+
+    private String noteDetailId;
+
+    private String title;
+
+    private String creationTime;
+
+    private Integer userId;
+
 }

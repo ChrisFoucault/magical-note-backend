@@ -1,0 +1,19 @@
+
+spring:
+  data:
+    mongodb: #mongoDB
+      host: 192.168.3.88
+      port: 27017
+      database: magical_note
+      authentication-database: admin
+
+  datasource:
+    url: jdbc:mysql://192.168.3.88:3306/magical_note
+    username: root
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # 自动建表策略
+    show-sql: true  # 控制台打印 SQL
+    database-platform: org.hibernate.dialect.MySQL8Dialect
