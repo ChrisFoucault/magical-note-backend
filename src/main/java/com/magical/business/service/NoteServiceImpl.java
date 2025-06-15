@@ -1,17 +1,28 @@
 package com.magical.business.service;
 
+import com.magical.business.dao.NoteRepository;
+import com.magical.business.entity.Note;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class NoteServiceImpl implements NoteService {
+
+    @Autowired
+    private NoteRepository noteRepository;
 
     /**
      * 获取笔记预览列表
      * @return
      */
     @Override
-    public String listPreviewNote() {
+    public List<Note> listPreviewNote() {
         Integer userId = 1;
-        return "";
+        List<Note> noteList = noteRepository.findByUserId(userId);
+
+
+        return noteList;
     }
 }

@@ -1,5 +1,4 @@
 package com.magical.business.dao;
 
-public interface UserNoteDAO
-{
+public interface UserNoteDAO {
 }
