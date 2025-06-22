@@ -25,4 +25,7 @@ public class Note {
     @Column(name = "user_id")
     private Integer userId;
 
+    @Transient
+    private NoteDetail noteDetail;
+
 }

@@ -6,6 +6,7 @@ import com.magical.business.service.UserNoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -22,9 +23,8 @@ public class NoteController {
      * @return
      */
     @GetMapping("/listPreviewNote")
-    public List<Note> listPreviewNote() {
-        List<Note> noteList = noteService.listPreviewNote();
+    public List<Note> listPreviewNote(@RequestParam Integer userId) {
+        List<Note> noteList = noteService.listPreviewNoteByUserId(userId);
         return noteList;
     }
-
 }

@@ -1,9 +1,14 @@
 package com.magical.business.dao;
 
-import com.magical.business.entity.Note;
+import com.magical.business.entity.NoteDetail;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
-public interface NoteMongoRepository extends MongoRepository<Note, String> {
+import java.util.List;
 
-    List<NoteMongo> findByUserId(Integer userId);
+@Repository
+public interface NoteMongoRepository extends MongoRepository<NoteDetail, String> {
+
+    List<NoteDetail> findByUserId(Integer userId);
+
 }

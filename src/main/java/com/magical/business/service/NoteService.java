@@ -10,5 +10,5 @@ public interface NoteService {
      * 获取笔记预览列表
      * @return
      */
-    List<Note> listPreviewNote ();
+    List<Note> listPreviewNoteByUserId(Integer userId);
 }
